@@ -86,13 +86,25 @@ def slowDown(event):
 
 def pressLetter(strLetter):
     if strLetter == 'z':
+        keyboardController.release(strLetter)
         keyboard.press('f1')
+        keyboardController.press(strLetter)
+        keyboard.release('f1')
+        keyboardController.release(strLetter)
         print('key pressed')
     elif strLetter == 'x':
+        keyboardController.release(strLetter)
         keyboard.press('f2')
+        keyboardController.press(strLetter)
+        keyboard.release('f2')
+        keyboardController.release(strLetter)
         print('key pressed')
     elif strLetter == 'c':
+        keyboardController.release(strLetter)
         keyboard.press('f3')
+        keyboardController.press(strLetter)
+        keyboard.release('f3')
+        keyboardController.release(strLetter)
         print('key pressed')
     else:
         keyboardController.press(strLetter)
@@ -100,12 +112,15 @@ def pressLetter(strLetter):
 	
 def releaseLetter(strLetter):
     if strLetter == 'z':
+        keyboardController.release(strLetter)
         keyboard.release('f1')
         print('key pressed')
     elif strLetter == 'x':
+        keyboardController.release(strLetter)
         keyboard.release('f2')
         print('key pressed')
     elif strLetter == 'c':
+        keyboardController.release(strLetter)
         keyboard.release('f3')
         print('key pressed')
     else:
