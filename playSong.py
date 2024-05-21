@@ -26,8 +26,6 @@ elapsedTime = 0
 origionalPlaybackSpeed = 1.0
 speedMultiplier = 2.0
 
-conversionCases = {'!': '1', '@': '2', '£': '3', '$': '4', '%': '5', '^': '6', '&': '7', '*': '8', '(': '9', ')': '0'}
-
 keyboardController = Controller()
 
 key_delete = 'delete'
@@ -64,14 +62,6 @@ def onDelPress():
         playNextNote()
     else:
         print("Stopping...")
-
-def isShifted(charIn):
-	asciiValue = ord(charIn)
-	if(asciiValue >= 65 and asciiValue <= 90):
-		return True
-	if(charIn in "!@#$%^&*()_+{}|:\"<>?"):
-		return True
-	return False
 
 def speedUp(event):
     global playback_speed
