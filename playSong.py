@@ -108,6 +108,7 @@ def pressLetter(strLetter):
         print('key pressed')
     else:
         keyboardController.press(strLetter)
+        keyboardController.release(strLetter)
         print('key not pressed')
 	
 def releaseLetter(strLetter):
